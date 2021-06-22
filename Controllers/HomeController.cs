@@ -66,7 +66,7 @@ namespace repaso_para_examen__1.Controllers
       
       
 
-        /****************************/
+       
         public async Task<IActionResult> Comentarios(int? id)
         {
             var userID = _userManager.GetUserName(User);

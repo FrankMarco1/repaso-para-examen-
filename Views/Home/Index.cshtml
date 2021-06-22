@@ -1,27 +1,29 @@
 ﻿@model IEnumerable<repaso_para_examen__1.Models.Fails>
 
-<h2 class="text-center">Fails  </h2>
-
+<div class="row" style="margin-left: 15%;">
+ <img src="~/img/1.png" alt="" style="width: 200px; height:150px ;">
+<h2  style="font-family: 'Courier New', Courier, monospace; font-size : 150px;">Fails  </h2>
+</div>
 
 <div class="container">
-  <div class="row " >
-    <div class="col "style="border: solid 2px;">
+  <div class="row ">
+    <div style="border: solid 5px;" class="btn btn-outline-primary">
       <a asp-controller="Home" asp-action="Index">Pagina principal</a>
     </div>
-    <div class="col"style="border: solid 2px;">
+    <div class="btn btn-outline-primary" style="border: solid 5px;  margin-left : 15%;">
       <a asp-action="CrearFails">Subir Fails</a>
     </div>
     @if(!User.Identity.IsAuthenticated){
-    <div class="col"style="border: solid 2px;">
+    <div class="btn btn-outline-primary" style="border: solid 5px;  margin-left : 15%;">
     <a  asp-controller="Cuenta" asp-action="CrearCuenta">Crear Cuenta</a>
 
     </div>
-    <div class="col "style="border: solid 2px;">
+    <div class="btn btn-outline-primary" style="border: solid 5px;  margin-left : 15%;">
     <a  asp-controller="Cuenta" asp-action="InicioSesion">Iniciar Sesion</a>
     </div>
     }
     else{
-    <div class="col "style="border: solid 2px;">
+    <div class="btn btn-outline-primary" style="border: solid 5px;  margin-left : 15%;">
     <a  asp-controller="Cuenta" asp-action="CerrarSesion">Cerrar Sesion</a>
     </div>
     
@@ -30,7 +32,7 @@
   </div>
 </div>
 <div style="margin-top: 45px;">
-@if(Model.Count()==0)
+@if(Model.Count() == 0)
 {
     <p>No tenemos ni un fails por ahora</p>
 }
@@ -41,7 +43,7 @@ else
             {
                 <hr >
                 <div class=" ">
-                    <p>Publicado por: <p  title="Manage"> @User.Identity.Name!</p></p>
+                    <p>Publicado por: <p  title="Manage"> @fails.UserID</p></p>
                    
                     <h2><b>Titulo:</b><a style="text-decoration:none;color:black;" asp-action="Comentarios" asp-route-id="@fails.Id"> @fails.Titulo</a></h2>
                    

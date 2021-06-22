@@ -1,6 +1,6 @@
 @model repaso_para_examen__1.Models.Fails
 
-<H1>Realizar un Comentario</H1>
+<H1 style="text-align: center;" >Agregue  un Comentario</H1>
     <dl class="container">
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Titulo)
@@ -13,12 +13,17 @@
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Imagen)
-            
         </dd>
+        
+        <div> 
+            <h1>COMENTARIO NUEVO</h1>
+         <textarea name="comentarios" style="width: 100%; height: 30%;" ></textarea>
+        
+         <button asp-action="Comentarios" type="button" class="btn btn-outline-secondary">Agregar-Comentario</button>
+        </div>
+
     </dl>
-</div>
-<div>    
-</div>
+
 
 
 
