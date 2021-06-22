@@ -1,0 +1,34 @@
+@model repaso_para_examen__1.Models.Fails
+
+
+<h1>Crear Fail</h1>
+   <div class="row">
+    <div class="col-md-4">
+        <form asp-action="CrearFails">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+             <div class="form-group">
+                <label asp-for="UserID" class="control-label"></label>
+                <input asp-for="UserID" class="form-control" ><p > @User.Identity.Name!</p></input>
+                <span asp-validation-for="UserID" class="text-danger"></span>
+            </div>
+           
+            <div class="form-group">
+                <label asp-for="Titulo" class="control-label"></label>
+                <input asp-for="Titulo" class="form-control" />
+                <span asp-validation-for="Titulo" class="text-danger"></span>
+            </div>
+
+            
+           <div class="form-group">
+                <label asp-for="Imagen" class="control-label"></label>
+                <input asp-for="Imagen" class="form-control" />
+                <span asp-validation-for="Imagen" class="text-danger"></span>
+            </div>
+            
+                           
+            <div class="form-group">
+                <input type="submit" value="CrearFails" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
